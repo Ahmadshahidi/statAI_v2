@@ -42,7 +42,7 @@ function Contact() {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-gray-50">
       {/* Hero Section */}
       <section className="bg-primary-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -64,7 +64,7 @@ function Contact() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
@@ -87,7 +87,7 @@ function Contact() {
               {locations.map((location, index) => (
                 <div
                   key={location.city}
-                  className="bg-gray-50 p-6 rounded-lg space-y-4"
+                  className="bg-gray-100 p-6 rounded-lg space-y-4"
                 >
                   <h3 className="text-xl font-semibold text-primary-900">
                     {location.city} Office
