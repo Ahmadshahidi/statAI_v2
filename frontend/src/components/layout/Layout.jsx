@@ -32,11 +32,11 @@ function Layout() {
   };
 
   return (
-    <div className={`flex flex-col min-h-screen bg-gray-500 dark:bg-gray-100 ${darkMode ? 'dark' : ''}`}>
+    <div className={`flex flex-col min-h-screen bg-gray-50 dark:bg-gray-100 ${darkMode ? 'dark' : ''}`}>
       <Navbar />
       
       <motion.main 
-        className="flex-grow pt-16 transition-colors duration-200 bg-gray-500 dark:bg-gray-900"
+        className="flex-grow pt-16 transition-colors duration-200 bg-gray-50 dark:bg-gray-900"
         initial="initial"
         animate="animate"
         exit="exit"
@@ -51,3 +51,5 @@ function Layout() {
 }
 
 export default Layout;
+
+export default Layout
