@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
-import { Menu, X, ChevronDown, BarChart2 } from 'lucide-react';
+import { Menu, X, ChevronDown, BarChart2, Sun, Moon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import UserMenu from './UserMenu';
+import { useTheme } from '../../contexts/ThemeContext';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { user, loading } = useAuth();
+  const { darkMode, toggleDarkMode } = useTheme();
   const location = useLocation();
 
   // Handle scroll effect
@@ -35,13 +37,13 @@ function Navbar() {
 
   const navbarClasses = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
     scrolled
-      ? 'bg-white shadow-md py-2'
-      : 'bg-transparent py-4'
+      ? 'bg-white dark:bg-gray-800 shadow-md py-2'
+      : 'bg-transparent dark:bg-transparent py-4'
   }`;
 
   const linkClasses = `font-medium transition-colors duration-200 hover:text-secondary-500 ${
     scrolled ? 'text-primary-900' : 'text-primary-900'
-  }`;
+  } dark:text-gray-100`;
 
   const activeLinkClasses = `${linkClasses} text-secondary-500 font-semibold`;
 
@@ -63,6 +65,13 @@ function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
+            <button
+              onClick={toggleDarkMode}
+              className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+            >
+              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+
             <Link
               to="/"
               className={isActiveLink('/') ? activeLinkClasses : linkClasses}

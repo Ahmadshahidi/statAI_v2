@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 :root {
+  --toast-bg: #FFFFFF;
+  --toast-color: #1A365D;
+}
+
+.dark {
+  --toast-bg: #1F2937;
+  --toast-color: #F3F4F6;
+}
+
+:root {
   --primary-color: #1a365d;
   --secondary-color: #0d9488;
   --accent-color: #ca8a04;
@@ -10,11 +20,11 @@
 
 @layer base {
   body {
-    @apply text-gray-800 bg-gray-50;
+    @apply text-gray-800 dark:text-gray-100 bg-gray-50 dark:bg-gray-900;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold text-primary-900;
+    @apply font-semibold text-primary-900 dark:text-gray-100;
   }
   
   h1 {
@@ -68,7 +78,7 @@
   }
   
   .card {
-    @apply bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-lg;
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-lg;
   }
   
   .section {

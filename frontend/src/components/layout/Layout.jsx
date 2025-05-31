@@ -3,8 +3,11 @@ import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { motion } from 'framer-motion';
+import { useTheme } from '../../contexts/ThemeContext';
 
 function Layout() {
+  const { darkMode } = useTheme();
+
   // Animation variants
   const pageVariants = {
     initial: {
@@ -29,11 +32,11 @@ function Layout() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className={`flex flex-col min-h-screen ${darkMode ? 'dark' : ''}`}>
       <Navbar />
       
       <motion.main 
-        className="flex-grow pt-16 bg-gray-50"
+        className="flex-grow pt-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-200"
         initial="initial"
         animate="animate"
         exit="exit"
