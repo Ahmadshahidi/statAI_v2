@@ -53,7 +53,7 @@ function Home() {
   };
 
   return (
-    <div>
+    <div className="bg-gray-50 dark:bg-gray-900">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-20 md:py-32">
         <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
@@ -115,7 +115,7 @@ function Home() {
       </section>
 
       {/* Statistics Section */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((stat) => (
@@ -125,7 +125,7 @@ function Home() {
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="bg-gray-50 p-6 rounded-lg text-center"
+                className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg text-center"
               >
                 <div className="flex justify-center mb-4">
                   {stat.icon}
@@ -229,7 +229,7 @@ function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
