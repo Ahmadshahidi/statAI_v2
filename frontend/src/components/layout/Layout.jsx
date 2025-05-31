@@ -33,7 +33,7 @@ function Layout() {
       <Navbar />
       
       <motion.main 
-        className="flex-grow pt-16"
+        className="flex-grow pt-16 bg-gray-50"
         initial="initial"
         animate="animate"
         exit="exit"
