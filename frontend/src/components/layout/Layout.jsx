@@ -32,7 +32,7 @@ function Layout() {
   };
 
   return (
-    <div className={`flex flex-col min-h-screen bg-white dark:bg-gray-900 ${darkMode ? 'dark' : ''}`}>
+    <div className={`flex flex-col min-h-screen bg-white dark:bg-gray-100 ${darkMode ? 'dark' : ''}`}>
       <Navbar />
       
       <motion.main 
