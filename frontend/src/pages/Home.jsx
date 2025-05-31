@@ -53,7 +53,7 @@ function Home() {
   };
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-900">
+    <div className="bg-white dark:bg-gray-900">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-20 md:py-32">
         <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
@@ -139,7 +139,7 @@ function Home() {
       </section>
 
       {/* Featured Courses Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-primary-900 mb-4">Featured Courses</h2>
