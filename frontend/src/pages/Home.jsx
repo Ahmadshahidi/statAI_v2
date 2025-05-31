@@ -53,7 +53,7 @@ function Home() {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-900">
+    <div className="bg-white dark:bg-gray-100">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-20 md:py-32">
         <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
